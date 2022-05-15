@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-transparent">
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h5>Youtube Downloader</h5>
+        </div>
+        <div class="card-body">
+            <div class="download-link">
+                <label class="linkHeader"><b>Link</b></label><br>
+                <label>
+                    <input type="txt" name="link" class="form-control link" required><br>
+                </label>
+            </div>
+            <form class="download-form">
+                <div class="form-group">
+                    <label class="formatHeader"><b>Format</b></label><br>
+                    <label>
+                        <select class="format" required>
+                            <option selected disabled>Select Format</option>
+                            <option value="mp4a">Mp4: 144p</option>
+                            <option value="360">Mp4: 360p</option>
+                            <option value="480">Mp4: 480p</option>
+                            <option value="720">Mp4: 720p</option>
+                            <option value="1080">Mp4: 1080p</option>
+                            <option value="mp3">Mp3</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="row">
+                    <div class="download-video">
+                        <br><button class="btn btn-success btn-block click-btn-down" type="submit">Click Me</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    $(".click-btn-down").click(function(){
+        var link = $(".link").val();
+        var format = $(".format").children("option:selected").val();
+        var src =""+link+"="+format+"";
+        downloadVideo(link,format);
+    });
+    function downloadVideo(link,format) {
+        $('.download-video').html('<iframe style="width:100%;height:60px;border:0;overflow:hidden;" scrolling="no" src="https://loader.to/api/button/?url='+link+'&f='+format+'"></iframe>');
+    }
+</script>
+</html>
