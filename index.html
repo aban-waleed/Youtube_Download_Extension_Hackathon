@@ -22,23 +22,9 @@
                 </label>
             </div>
             <form class="download-form">
-                <div class="form-group">
-                    <label class="formatHeader"><b>Format</b></label><br>
-                    <label>
-                        <select class="format" required>
-                            <option selected disabled>Select Format</option>
-                            <option value="mp4a">Mp4: 144p</option>
-                            <option value="360">Mp4: 360p</option>
-                            <option value="480">Mp4: 480p</option>
-                            <option value="720">Mp4: 720p</option>
-                            <option value="1080">Mp4: 1080p</option>
-                            <option value="mp3">Mp3</option>
-                        </select>
-                    </label>
-                </div>
                 <div class="row">
                     <div class="download-video">
-                        <br><button class="btn btn-success btn-block click-btn-down" type="submit">Click Me</button>
+                        <button class="btn btn-success btn-block click-btn-down" type="submit">Click Me</button>
                     </div>
                 </div>
             </form>
@@ -49,12 +35,11 @@
 <script type="text/javascript">
     $(".click-btn-down").click(function(){
         var link = $(".link").val();
-        var format = $(".format").children("option:selected").val();
-        var src =""+link+"="+format+"";
-        downloadVideo(link,format);
+        var src =""+link+"";
+        downloadVideo(link);
     });
-    function downloadVideo(link,format) {
-        $('.download-video').html('<iframe style="width:100%;height:60px;border:0;overflow:hidden;" scrolling="no" src="https://loader.to/api/button/?url='+link+'&f='+format+'"></iframe>');
+    function downloadVideo(link) {
+        $('.download-video').html('<iframe style="width:800px;height:250px;border:0;overflow:hidden;" scrolling="no" src="https://loader.to/api/card/?url='+link+'"></iframe>');
     }
 </script>
 </html>
