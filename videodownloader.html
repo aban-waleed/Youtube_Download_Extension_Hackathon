@@ -15,40 +15,30 @@
             <h5>Youtube Downloader</h5>
         </div>
         <div class="card-body">
-            <div class="row">
-                <div class="downloader">
-                    <div class="form-group">
-                        <label class="linkHeader"><b>Link</b></label><br>
-                        <label>
-                            <input type="txt" name="link" class="form-control link" required><br>
-                        </label>
-                    </div>
-                </div>
+            <div class="download-link">
+                <label class="linkHeader"><b>Link</b></label><br>
+                <label>
+                    <input type="txt" name="link" class="form-control link" required><br>
+                </label>
             </div>
-            <form class="form-download">
-                <div class="row">
-                    <div class="downloader">
-                        <div class="form-group">
-                            <label class="formatHeader"><b>Format</b></label><br>
-                            <label>
-                                <select class="format" required>
-                                    <option selected disabled>Select Format</option>
-                                    <option value="mp4a">Mp4: 144p</option>
-                                    <option value="360">Mp4: 360p</option>
-                                    <option value="480">Mp4: 480p</option>
-                                    <option value="720">Mp4: 720p</option>
-                                    <option value="1080">Mp4: 1080p</option>
-                                    <option value="mp3">Mp3</option>
-                                </select>
-                            </label>
-                        </div>
-                    </div>
+            <form class="download-form">
+                <div class="form-group">
+                    <label class="formatHeader"><b>Format</b></label><br>
+                    <label>
+                        <select class="format" required>
+                            <option selected disabled>Select Format</option>
+                            <option value="mp4a">Mp4: 144p</option>
+                            <option value="360">Mp4: 360p</option>
+                            <option value="480">Mp4: 480p</option>
+                            <option value="720">Mp4: 720p</option>
+                            <option value="1080">Mp4: 1080p</option>
+                            <option value="mp3">Mp3</option>
+                        </select>
+                    </label>
                 </div>
                 <div class="row">
-                    <div class="downloader">
-                        <div class="download-video">
+                    <div class="download-video">
                             <br><button class="btn btn-success btn-block click-btn-down" type="submit">Click Me</button>
-                        </div>
                     </div>
                 </div>
             </form>
